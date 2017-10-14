@@ -168,7 +168,7 @@
 @media (max-width: 649px){
 
 	#about{
-		height: 130vh; /* set viewport constraint */
+		height: 120vh; /* set viewport constraint */
 	    min-height: 100%; /* enforce height */
 
 	}
@@ -191,8 +191,11 @@
 		text-align: right;
 		position: relative;
 		height: 1em;
+		z-index: 1000;
+
 	}
 	.nav{
+		z-index: 999;
 		margin: 0;
 		position: absolute;
 		left: 50%;
