@@ -33,13 +33,6 @@
 	line-height: 2.5em;
 }
 
-.email{
-	display: inline-block;
-	background: white;
-	left: 0.5em;
-	bottom: 0.5em;
-	position: absolute;
-}
 
 .container{
 	left: 25%;
@@ -59,13 +52,34 @@
 
 /*desktops*/
 @media (min-width: 1050px) { 
+
+
+.email{
+	display: inline-block;
+	background: white;
+	left: 0.25em;
+	bottom: 0.5em;
+	position: absolute;
+	line-height: 1em;
+}
+
 	#block1{
 		left: 32px;
 		top: 1em;
 		font-size: 1.8em;
 	}
 
+	#block1home{
+		left: 32px;
+		top: 1em;
+		font-size: 1.8em;
+	}
+
 	#block2{
+		left: 105px;
+		top: 3.5em;
+	}
+	#block2home{
 		left: 105px;
 		top: 3.5em;
 	}
@@ -83,6 +97,12 @@
 	}
 
 	#block9{
+		left: 50px;
+		top: 12.8em;
+		font-size: 1.3em;
+	}
+
+	#block9home{
 		left: 50px;
 		top: 12.8em;
 		font-size: 1.3em;
@@ -112,13 +132,36 @@
 
 /*smaller screens*/
 @media (min-width: 650px) and (max-width: 1049px) {
+
+
+.email{
+	display: inline-block;
+	background: white;
+	left: 0.25em;
+	bottom: 0.5em;
+	position: absolute;
+	line-height: 1em;
+
+}
+
 	#block1{
 		left: 32px;
 		top: 1em;
 		font-size: 1.8em;
 	}
 
+	#block1home{
+		left: 32px;
+		top: 1em;
+		font-size: 1.8em;
+	}
+
 	#block2{
+		left: 105px;
+		top: 4.5em;
+	}
+
+	#block2home{
 		left: 105px;
 		top: 4.5em;
 	}
@@ -139,6 +182,11 @@
 	#block9{
 		left: 50px;
 		top: 18em;
+		font-size: 1.3em;
+	}
+	#block9home{
+		left: 50px;
+		top: 13em;
 		font-size: 1.3em;
 	}
 
@@ -167,8 +215,8 @@
 /*mobile here:*/
 @media (max-width: 649px){
 
-	#about{
-		height: 120vh; /* set viewport constraint */
+	body{
+		height: 170vh; /* set viewport constraint */
 	    min-height: 100%; /* enforce height */
 
 	}
@@ -186,13 +234,12 @@
 	.email{
 		display: inline-block;
 		background: white;
-		right: 0em;
-		top: 0.5em;
-		text-align: right;
-		position: relative;
-		height: 1em;
+		position: absolute;
+		left: 50%;
+  		margin-left: -50px;
+  		top: 9.25em;
 		z-index: 1000;
-
+		line-height: 1em;
 	}
 	.nav{
 		z-index: 999;
@@ -205,34 +252,55 @@
 
 	#block1{
 		left: 10px;
-		top: 10em;
+		top: 13em;
 		font-size: 1.8em;
+		width: 90%;
+	}
+
+	#block1home{
+		left: 10px;
+		top: 15em;
+		font-size: 1.8em;
+		width: 80%;
 	}
 
 	#block2{
-		left: 80px;
-		top: 15.5em;
+		left: 50px;
+		top: 19.7em;
 		width: 80%;
+	}
+
+	#block2home{
+		left: 100px;
+		top: 22.5em;
+		width: 70%;
 	}
 
 	#block7{
 		left: 15px;
-		top: 23em;
+		top: 30em;
 		font-size: 1.3em;
 		width: 80%;
 	}
 
 	#block8{
-		left: 100px;
-		top: 27em;
+		left: 60px;
+		top: 34.3em;
 		font-size: 1.3em;
 		width:80%;
 	}
 
 	#block9{
-		left: 50px;
-		top: 32em;
+		left: 40px;
+		top: 40.2em;
 		font-size: 1.3em;
+		width: 85%;
+	}
+	#block9home{
+		left: 50px;
+		top: 34em;
+		font-size: 1.3em;
+		width: 75%;
 	}
 
 
@@ -240,22 +308,23 @@
 
 	#block3{
 		left: 40px;
-		top: 31em;
+		top: 39em;
 	}
 	#block4{
 		left: 47px;
-		top: 33.1em;
+		top: 41.1em;
 	}
 	#block5{
 		left: 130px;
-		top: 32.5em;
+		top: 41.5em;
 	}
 	#block6{
 		left: 160px;
-		top: 32.7em;
+		top: 40.7em;
 		padding: 4px;
 	}
 }
+
 
 
 
