@@ -16,6 +16,7 @@
 
 #header{
 	font-size: 3.5em;
+	z-index: 1000;
 
 }
 
@@ -244,10 +245,15 @@
 	.nav{
 		z-index: 999;
 		margin: 0;
-		position: absolute;
+		position: relative;
 		left: 50%;
   		margin-left: -50px;
   		top: -2em;
+  		width: 200px;
+	}
+	#header{
+		z-index: 1000;
+		position: relative;
 	}
 
 	#block1{
@@ -311,16 +317,16 @@
 		top: 39em;
 	}
 	#block4{
-		left: 47px;
-		top: 41.1em;
+		left: 45px;
+		top: 40.1em;
 	}
 	#block5{
 		left: 130px;
-		top: 41.5em;
+		top: 39.5em;
 	}
 	#block6{
 		left: 160px;
-		top: 40.7em;
+		top: 39.7em;
 		padding: 4px;
 	}
 }
