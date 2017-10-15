@@ -1,0 +1,92 @@
+
+<html>
+<head>
+<title>Adam Barr-Neuwirth Project Writeup</title>
+</head>
+<body>
+Below is a writeup I did of one project I completed for <a href="https://www.bkconnection.com/" target="_blank">Berrett-Koehler Publishers</a>.
+</br></br>
+Too long? Summary: I created a system to make websites very fast that led to (on the publisher's main site):
+</br><b>+25.44%</b> increase in sessions
+</br><b>+21.86%</b> increase in users
+</br><b>+15.04%</b> increase in page views</br>
+<div id="content" style="width: 800px; font-size: 16px; line-height: 1.5; font-family: "Segoe UI", Helvetica, Arial, sans-serif; text-align: left; margin: 0px auto;">
+<h1><a id="Accessible_and_Dynamic_Author_Microsites_ADAM_0"></a>Accessible and Dynamic Author microsites</h1>
+<hr>
+<h2><a id="Business_People_2"></a>Business People:</h2>
+<h3><a id="Background_3"></a>Background</h3>
+<p>Over the summer, I worked at Berrett-Koehler Publishers. I, as the digital intern, was tasked with overcoming three problems.</p>
+<ol>
+<li>First off, authors (with not much technical know how) either have to pay a lot of money to get a website designed for them (~$3,000 for a very basic site), or they have to spend hours trying to do it themselves. This wastes resources that can be better used promoting/editing/writing their book. The publisher doesn't make the book sites for the authors due to the resources required.</li>
+<li>Second, the Berrett-Koehler brand was not as well recognized as they would have liked. A simple way to increase brand awareness would be to put a small "About the Publisher" blurb on all the book sites. However, this was not possible becuase authors themselves owned, hosted, and maintained the sites.</li>
+<li>Lastly, profit margins are higher on Berrett-Koehler's own site, <a href="http://www.bkconnection.com">www.bkconnection.com</a> as oposed to <a href="http://www.amazon.com">www.amazon.com</a>. Ideally book sites would prioritize the "Buy from the Publisher" button over Amazon's button, but again, due to BK's lack of control over the sites, this could not be acomplished.</li>
+</ol>
+<p>We can distill this down into two things that BK wants for the book sites:</p>
+<ol>
+<li>Cheaper &amp; More Efficient</li>
+<li>Control (Button placement/Brand content)</li>
+</ol>
+<p>I set out to create a system that allowed a system administrator to quickly create book sites just by inputting information into a simple form. The goal was for each site to be able to be set up in less then 30 minutes.</p>
+<h3><a id="What_it_is_15"></a>What it is</h3>
+<p>In English, it's basically a way for a slightly technically inclined administrator to create new book sites fast. She is guided by a custom chrome extention I made (also on github) called Alfred. He redirects the browser to the pages needed to set up the site. He prompts the administrator to fill in an HTML form with information about the book (cover, about, links, etc). When the administrator clicks submit, she will be redirected by Alfred to various other pages she needs to see/approve before the site can go live. Alfred will autofill reduntant information and let the administrator know what she needs to know/click to advance. The system fills the book information into a custom built template I created. It creates a new site hosted on the server and maps domains/configures server details. My custom code runs on Wordpress (Multisite), along with many other plugins.</p>
+<h3><a id="Business_Benefits__Results_18"></a>Business Benefits &amp; Results</h3>
+<p>Addressing each problem:</p>
+<ol>
+<li>The cost for hosting all of the microsites is only $60 / year. It takes only 30 minutes to set up a new site. Compared to the $3,000 and countless hours that authors were spending before, this is a terrific improvement. By our estimates, the total system is 1000x cheaper and 45x more efficient then without it. Authors sites now look more elegent, they are mobile friendly, and the author has time and money to promote the book.</li>
+<li>A prominent BK logo and "About the Publisher" blurb appear on all book sites created with the system. Color schemes reflect the BK brand on certain pages and numerous references to the publisher are made throughout the site.</li>
+<li>Traffic to the main Berret Koehler site: <a href="http://www.bkconnection.com">www.bkconnection.com</a>. A few months after I left, I asked to take a last look at some analytics. Comparing the 2 month period after I left with the 2 month period I was working (before we launched the system) (September - October 2015 vs July - August 2015). We saw a:
+<ul>
+<li>+25.44% increase in sessions</li>
+<li>+21.86% increase in users</li>
+<li>+15.04% increase in page views</li>
+</ul>
+</li>
+</ol>
+<p>Unforseen benefits:</p>
+<ol>
+<li>SEO Increase. All sites have origional content and are linked together along with <a href="http://bkconnection.com">bkconnection.com</a>. This increased the SEO of all the sites</li>
+</ol>
+<hr>
+<h2><a id="Tech_People_30"></a>Tech People:</h2>
+<h3><a id="The_Technical_Copy_31"></a>The Technical Copy</h3>
+<p>An Accessible and Dynamic Author Microsite, is essentially what it sounds like. Utilizing a custom engine built with php and javascript running on top of a Wordpress Multisite installation, ADAM effectively creates connected and synergetic web properties very rapidly. Simple html forms pass data to server side php scripts which process and parse the data into elegant and modern lightweight, resource conscious websites. Initial configuration can be further streamlined with the creation of multiple microsites at once. As user creation and management as well as permission management is built into the automated system - so are security and backup management scripts. While hosted in the same web server and easily manageable from the wordpress admin area, each microsite acts independently of the others. Various modified plugins support each site with security, front end design (page specific menu items, user agent detection and redirection, etc), and other gaps in the generic wordpress multisite installation.</p>
+<h3><a id="Whats_included_in_the_repository_35"></a>What's included in the repository</h3>
+<p>I did not include all my custom code. I made many modifications to almost all of the wordpress files to support this new system. I am only including the fully custom built part by me. It takes the input from the HTML form, creates a new site from the template, and fills in the content. I'm doing this so in case you're doing somthing similar, you can look through my stuff and find anything that could help you. I didn't want to upload the entire wordpress installation though…</p>
+<h3><a id="System_Process_38"></a>System Process:</h3>
+<p>I tried my best to make the "track" as easy to follow as possible. The chrome extention "Alfred" redirects/autofills/guides the admin through this proccess.</p>
+<ol>
+<li>Admin changes DNS settings on the domain to point the domain to our server and adds the domain to the plesk control panel</li>
+<li>Admin enters info for new site (duplicate_site.html)</li>
+<li>1-click script duplicates the boilerplate site (duplicate_site.php). The script creates as site with an internal url of the first 4 letters of the book + last 6 digits of the current unix timestamp. Admin is redirected to the domain mapping page</li>
+<li>Admin clicks "save" on the domain mapping page (autofilled correct values via session variables)</li>
+<li>Admin clicks link to site config page. The correct domain is already filled out. Admin clicks save</li>
+<li>Admin clicks link to edit content form. (/edit_content/index.html) They fill out the content. (Password protected [author, BKconnection!]) This information is sent to the PHP script. (/edit_content/replace_content.php)</li>
+<li>PHP script (/edit_content/replace_content.php) pulls html code from generic template (/edit_content/template.html). The script finds html comments that serve as markers to specify what information (about author, cover photo, etc) is where. The script then replaces the content inside of those markers with the content the user entered.</li>
+<li>PHP script does the same thing with the mobile template (/edit_content/mtemplate.html)</li>
+<li>PHP script gets book title (user entered this before) and creates a file with the first 10 letters .php. This will serve as the contact mailing script. The book title is used to differentiate all the mailing scripts for all the microsites.</li>
+<li>PHP script gets 1st part of mailer script (/edit_content/mailer1.txt) and writes it to the mailer script (/mailer/booktitle.php). PHP script inserts the author's email address. PHP script gets 2nd part of mailer script (/edit_content/mailer2.txt) and appends it to the mailer script (/mailer/booktitle.php).</li>
+<li>PHP script assembles the new home page html files (desktop and mobile) with the user's content and the inserts the new html file into the wordpress database. The desktop version is marked as page id #11 and the mobile version is marked as page id #148. This tells the wordpress database which html to fetch depending on which device is being used to access the site.</li>
+<li>Page is now published. Page pulls main styles from theme's stylesheet (/wp-content/themes/solon/style.css). Edit the styles in the theme editor (Network Admin &gt; Themes &gt; Editor &gt; Stylesheet). Included in style.css are the mailchimp styles and contact form styles.</li>
+<li>Page also pulls styles from PlugNEdit stylesheet (/wp-content/plugins/plugnedit/css/style.css). This keeps the pages somewhat responsive. PlugNEdit is the system used to create the page layout. You may edit this style sheet with the plugin editor (Network Admin &gt; Plugins &gt; Editor &gt; PlugNEdit Adaptive Editor (dropdown menu at top right) &gt; ‘plugnedit/css/style.css'))</li>
+<li>Additional styles are pulled but are not very significant. Refer to the page source &lt;head&gt; section to find additional stylesheets for smaller elements.</li>
+</ol>
+<h3><a id="Plugins_I_Used__Why_57"></a>Plugins I Used &amp; Why:</h3>
+<ul>
+<li>WP-CLI - Ability to execute server commands from PHP</li>
+<li>Wordfence - Security</li>
+<li>Yoast - SEO</li>
+<li>Dashboard Message - Reminders/Notifications</li>
+<li>Easy Smooth Scroll Links - Easy smooth scrolling</li>
+<li>Equivalent Mobile Redirect - Mobile redirect script</li>
+<li>Multisite Clone Duplicator - Duplicating template site</li>
+<li>Page Links To - External links in Wordpress menubar</li>
+<li>Page Specific Menu Items - Self explanitory</li>
+<li>PlugNEdit - Easy page builder/renderer</li>
+<li>Remove KSES - Allows non super-admins to insert HTML. It's nessesary for just a regular admin account to create a site (you need to insert HTML into a page to make the site)</li>
+<li>MU Domain Mapping - Allows multiple domains on the single host</li>
+<li>Thin Out Revisions - Removes redundant/unnessesary revisions</li>
+<li>Google Analytics - Analytics!</li>
+</ul>
+</div>
+</body>
+</html>
