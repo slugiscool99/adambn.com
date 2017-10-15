@@ -64,6 +64,24 @@
 	line-height: 1em;
 }
 
+	#blocka{
+		left: 32px;
+		top: 1em;
+		font-size: 1.8em;
+	}
+	#blockb{
+		left: 210px;
+		top: 2.5em;
+		font-size: 1.8em;
+	}
+	#blockc{
+		left: 500px;
+		top: 4em;
+		font-size: 1.8em;
+	}
+
+
+
 	#block1{
 		left: 32px;
 		top: 1em;
@@ -134,16 +152,37 @@
 /*smaller screens*/
 @media (min-width: 650px) and (max-width: 1049px) {
 
+	body{
+		height: 160vh; /* set viewport constraint */
+	    min-height: 100%; /* enforce height */
+
+	}
 
 .email{
 	display: inline-block;
 	background: white;
-	left: 0.25em;
-	bottom: 0.5em;
-	position: absolute;
+	left: 0em;
+	bottom: 0em;
+	position: relative;
 	line-height: 1em;
 
 }
+
+	#blocka{
+		left: 32px;
+		top: 1em;
+		font-size: 1.8em;
+	}
+	#blockb{
+		left: 210px;
+		top: 2.5em;
+		font-size: 1.8em;
+	}
+	#blockc{
+		left: 64px;
+		top: 9em;
+		font-size: 1.8em;
+	}
 
 	#block1{
 		left: 32px;
@@ -217,7 +256,7 @@
 @media (max-width: 649px){
 
 	body{
-		height: 170vh; /* set viewport constraint */
+		height: 200vh; /* set viewport constraint */
 	    min-height: 100%; /* enforce height */
 
 	}
@@ -255,6 +294,24 @@
 		z-index: 1000;
 		position: relative;
 	}
+
+	#blocka{
+		left: 20%;
+		top: 14em;
+		font-size: 1.8em;
+	}
+	#blockb{
+		left: 30%;
+		top: 20em;
+		font-size: 1.8em;
+		width: 170px;
+	}
+	#blockc{
+		left: 14%;
+		top: 27em;
+		font-size: 1.8em;
+	}
+
 
 	#block1{
 		left: 10px;
