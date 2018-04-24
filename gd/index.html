@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Great Day - Change Your Habits</title>
+	<script>
+
+		function iOS(){
+		  var iDevices = [
+		    'iPad Simulator',
+		    'iPhone Simulator',
+		    'iPod Simulator',
+		    'iPad',
+		    'iPhone',
+		    'iPod'
+		  ];
+
+		  if (!!navigator.platform) {
+		    while (iDevices.length) {
+		      if (navigator.platform === iDevices.pop()){ 
+		      	return true;
+		      }
+		    }
+		    return false;
+		  }
+		}
+
+		if(iOS()){
+			window.location="itms-apps://itunes.apple.com/us/app/open-secrets/id1274298625" 
+		}
+		else{
+			window.location="https://itunes.apple.com/us/app/open-secrets/id1274298625" 
+		}
+
+		
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54292731-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-54292731-7');
+</script>
+
+</head>
+<body>
+	One moment...
+</body>
+</html>

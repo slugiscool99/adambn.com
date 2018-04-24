@@ -1,5 +1,49 @@
+@media (min-width:0px) { 
+    #home {
+		background-image: url(/homes/home1000.jpg);
+    }
+    #about{
+		background-image: url(/abouts/about1000.jpg);
+	}
+	#projects{
+		background-image: url(/projects/projects1000.jpg);
+	}
+}   
+@media (min-width:1000px) { 
+    #home {
+		background-image: url(/homes/home2000.jpg);
+    }
+    #about{
+		background-image: url(/abouts/about2000.jpg);
+	}
+	#projects{
+		background-image: url(/projects/projects2000.jpg);
+	}
+}   
+@media (min-width:2000px) { 
+    #home {
+		background-image: url(/homes/home3000.jpg);
+    }
+    #about{
+		background-image: url(/abouts/about.jpg);
+	}
+	#projects{
+		background-image: url(/projects/projects.jpg);
+	}
+}    
+@media (min-width:3000px) { 
+    #home {
+		background-image: url(/homes/home.jpg);
+    }
+    #about{
+		background-image: url(/abouts/about.jpg);
+	}
+	#projects{
+		background-image: url(/projects/projects.jpg);
+	}
+}   
+
 #home{
-	background-image: url(home.jpg);
 	background-repeat: no-repeat;
 	background-position: 0% 0%;
 	background-size: cover;
@@ -7,12 +51,19 @@
 }
 
 #about{
-	background-image: url(about.jpg);
 	background-repeat: no-repeat;
 	background-position: 0% 0%;
 	background-size: cover;
 	font-family: 'Karla', sans-serif;
 }
+
+#projects{
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	background-size: cover;
+	font-family: 'Karla', sans-serif;
+}
+
 
 #header{
 	font-size: 3.5em;
