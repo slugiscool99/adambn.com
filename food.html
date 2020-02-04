@@ -1,0 +1,103 @@
+<html>
+<head>
+	<title>Adam's Food List</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+
+	<meta name="description" content="A list of my favorite foods in every city I've been to">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54292731-7"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-54292731-7');
+	</script>
+
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+
+	<script>
+		var divs = $('div[id^="content-"]').hide(),
+		    i = 0;
+
+		(function cycle() { 
+
+		    divs.eq(i).fadeIn(400)
+		              .delay(1000)
+		              .fadeOut(400, cycle);
+
+		    i = ++i % divs.length;
+
+		})();
+	</script>
+
+	<style>
+		u{
+			line-height:1.6em;
+		}
+	</style>
+</head>
+<body>
+	<div class="content" style="max-width:500px;">
+		<center>
+			<div>
+				<div class="foodCycle" style="font-size:92px;">
+					<div id="content-1">&#127828;</div>
+					<div id="content-2">&#127829;</div>
+					<div id="content-3">&#127839;</div>
+					<div id="content-4">&#127850;</div>
+					<div id="content-5">&#127843;</div>
+					<div id="content-6">&#127836;</div>
+				</div>
+				<div>
+					<center>
+						<div style="font-size:24px;margin:12px;font-weight:700;">Adam's Food List</div>
+						<div style="font-size:20px;margin:12px;font-weight:500;">I only add a place if it's an absolute 10/10</div>
+					</center>
+				</div>
+			</div>
+
+
+		</center>
+
+
+		<br><center style="margin-bottom:8px;">San Francisco &#127745;</center>
+		<u>Roam Burger</u> Fancy burgers (super good)
+		<br><u>El Farolito</u> Best mexican food (in the mission)
+		
+		<br><br><center style="margin-bottom:8px;">New York City &#128509;</center>
+		<u>Xian Famous Food</u> Zha Jiang noodles are my favorite (very spicy!)
+		<br><u>Buvette</u> Expensive, but worth it (french tapas)
+		<br><u>Employees Only</u> Best steak tartare in the city (also a bar)
+		<br><u>Jack's Wife Freda</u> Great brunch (and great vibes)
+
+
+		<br><br><center style="margin-bottom:8px;">Kiev &#128332;</center>
+		<u>Kyivska Perepichka</u> Hot dog inside a pastry-like thing (way better than you'd think)
+		
+		<br><br><center style="margin-bottom:8px;">Hong Kong &#127961;</center>
+		<u>Shugetsu</u> Get the Tsukemen (dipping ramen)
+		<br><u>Tim Ho Wan</u> Pretty much everything is good (dim sum)
+
+		<br><br><center style="margin-bottom:8px;">Copenhagen &#127984;</center>
+		<u>Duck It</u> Duck meat burger
+
+		<br><br><center style="margin-bottom:8px;">Santa Barbara &#127965;</center>
+		<u>Lilly's Taqueria</u> Simple, but fantastic (tacos)
+
+		<br><br><center style="margin-bottom:8px;">Berkeley &#127979;</center>
+		<u>Gregoire</u> Potato puffs, buttermilk sandwhich (casual french)
+
+
+	
+
+	</div>
+	<div class="food"><a href="index.html">&#127968;</a></div>
+</body>
+</html>

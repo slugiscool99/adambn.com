@@ -1,0 +1,125 @@
+	<html>
+<head>
+	<title>Adelia or the Nose Play</title>
+	<link rel="stylesheet" type="text/css" href="styl.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	 <meta charset='utf-8'>
+
+
+</head>
+
+<body bgcolor="#F00063">
+
+
+<div id="wrapper">
+
+<div id="info">
+	<a href="http://dixonplace.org/performances/adelia-or-the-nose-play/" target="_blank">Tickets 🎟</a><br>
+	<a href="https://www.gofundme.com/noseplay?member=2180254&utm_source=website&utm_medium=website" target="_blank">Donate ❤️</a>
+
+</div>
+
+<div id="glassesContainer">
+	<img id="glassesImage" src="nonose.png" />
+	<img id="glassesNose" src="nose.png" />
+
+</div>
+
+<div id="textContainer">
+	<img id="textImage" src="text.png" />
+</div>
+
+<div id="scrollIndicator">Scroll↓</div>
+
+
+<div id="spacer">
+</div>
+
+<div id="details">
+	<div id="innerDetails">
+In a land far away, in a time long ago last week, Adelia, a noseless woman, crosses The Sea in the pursuit of love. On an unfamiliar shore, she finds Max, a loving dad from match.com. But can we allow ourselves to be loved for that which we are hated for? What is to be done about the wolf in the woods? And how long will it take San Jose, CA to crumble?
+</div>
+</div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
+</script>
+
+<script>
+
+var triggerHeight = 0;
+var triggerHeight2 = 0;
+
+let height = $("#textContainer").position().top - 80;
+
+var $body = $(document);
+$body.bind('scroll', function() {
+    // "Disable" the horizontal scroll.
+    if ($body.scrollLeft() !== 0) {
+        $body.scrollLeft(0);
+    }
+});
+
+// $(window).on('touchstart touchend touchmove mousewheel touchcancel gesturestart gestureend gesturechange orientationchange', function(){
+//         //alert($(window).scrollTop());
+//         $(window).trigger('scroll');
+//     });
+
+window.onscroll = function update() {
+	console.log(document.documentElement.scrollTop);
+	console.log(document.body.scrollTop);
+	// console.log(this.scrollY);
+	$("#scrollIndicator").css("opacity", (25 - this.scrollY)/25);
+
+	$("#info").css("opacity", ((this.scrollY-height)/height) -  0.2);
+
+	$("#textContainer").css("opacity", ((this.scrollY)/height) -  0.2);
+
+	$("#glassesNose").css("opacity", ((this.scrollY)/height) -  0.2);
+
+
+
+	if ($("#textContainer").offset().top <= $("#glassesContainer").offset().top) {
+
+		$("#textContainer").addClass("fixed");
+		if(triggerHeight == 0){
+			triggerHeight = window.scrollY;
+		}
+	} 
+
+	if (($("#details").offset().top + $("#details").height()) <= window.scrollY + window.innerHeight - 36) {
+		$("#details").addClass("fixedDeets");
+		if(triggerHeight2 == 0){
+				triggerHeight2 = window.scrollY;
+		}
+	}else{
+		$("details").removeClass("fixedDeets");
+	}
+
+
+
+	if(window.scrollY < triggerHeight-1){
+		$("#textContainer").removeClass("fixed");
+		var x = $("#textContainer").offset();      
+        $("#textContainer").offset({top : x.top + 1, left : x.left}); 
+        triggerHeight = 0;     
+	}
+
+	if(window.scrollY < triggerHeight2-1){
+		$("#details").removeClass("fixedDeets");
+		var x = $("#details").offset();      
+        $("#details").offset({top : x.top + 1, left : x.left}); 
+        triggerHeight2 = 0;     
+	}
+
+}
+
+</script>
+
+</body>
+</html>
