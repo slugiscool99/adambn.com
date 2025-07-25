@@ -99,7 +99,155 @@
               </div>
 
               <div style="line-height: 1.5em">
-                <!-- <div style="margin: 12px; font-weight: 700; font-size: 1em">Investments</div> -->
+                <div style="margin: 12px; font-weight: 700; font-size: 1em">Contributions</div>
+                <div id="links">
+                  <table
+                    style="
+                      margin: auto;
+                      width: 400px;
+                      text-align: left;
+                      line-height: 1.5em;
+                      font-size: 1em;
+                      border-collapse: separate;
+                      border-spacing: 0 8px;
+                    "
+                  >
+                    <tr
+                      style="transition: background-color 0.2s; border-radius: 8px; cursor: pointer"
+                      onmouseover="this.style.backgroundColor='#e0e0e0'"
+                      onmouseout="this.style.backgroundColor='transparent'"
+                      onclick="window.open('https://launchpointhq.com/', '_blank')"
+                    >
+                      <td style="padding: 0.8em 1em; border-radius: 8px 0 0 8px">
+                        <a>Launchpoint</a>
+                      </td>
+                      <td style="opacity: 0.8; padding: 0.8em 1em; text-align: right; border-radius: 0 8px 8px 0">
+                        CTO
+                      </td>
+                    </tr>
+                    <tr
+                      style="transition: background-color 0.2s; border-radius: 8px; cursor: pointer"
+                      onmouseover="this.style.backgroundColor='#e0e0e0'"
+                      onmouseout="this.style.backgroundColor='transparent'"
+                      onclick="window.open('https://paralleldistribution.com/', '_blank')"
+                    >
+                      <td style="padding: 0.8em 1em; border-radius: 8px 0 0 8px">
+                        <a>Parallel Distribution</a>
+                      </td>
+                      <td style="opacity: 0.8; padding: 0.8em 1em; text-align: right; border-radius: 0 8px 8px 0">
+                        CTO
+                      </td>
+                    </tr>
+                    <tr
+                      style="transition: background-color 0.2s; border-radius: 8px; cursor: pointer"
+                      onmouseover="this.style.backgroundColor='#e0e0e0'"
+                      onmouseout="this.style.backgroundColor='transparent'"
+                      onclick="window.open('https://unionst.com/', '_blank')"
+                    >
+                      <td style="padding: 0.8em 1em; border-radius: 8px 0 0 8px">
+                        <a>Union Street Studios</a>
+                      </td>
+                      <td style="opacity: 0.8; padding: 0.8em 1em; text-align: right; border-radius: 0 8px 8px 0">
+                        SWE
+                      </td>
+                    </tr>
+                    <tr
+                      style="transition: background-color 0.2s; border-radius: 8px; cursor: pointer"
+                      onmouseover="this.style.backgroundColor='#e0e0e0'"
+                      onmouseout="this.style.backgroundColor='transparent'"
+                      onclick="window.open('https://triumpharcade.com/', '_blank')"
+                    >
+                      <td style="padding: 0.8em 1em; border-radius: 8px 0 0 8px">
+                        <a>Triumph</a>
+                      </td>
+                      <td style="opacity: 0.8; padding: 0.8em 1em; text-align: right; border-radius: 0 8px 8px 0">
+                        SWE
+                      </td>
+                    </tr>
+                    <tr
+                      style="transition: background-color 0.2s; border-radius: 8px; cursor: pointer"
+                      onmouseover="this.style.backgroundColor='#e0e0e0'"
+                      onmouseout="this.style.backgroundColor='transparent'"
+                      onclick="window.open('https://shopify.com/', '_blank')"
+                    >
+                      <td style="padding: 0.8em 1em; border-radius: 8px 0 0 8px">
+                        <a>Shopify</a>
+                      </td>
+                      <td style="opacity: 0.8; padding: 0.8em 1em; text-align: right; border-radius: 0 8px 8px 0">
+                        SWE
+                      </td>
+                    </tr>
+                    <tr
+                      style="transition: background-color 0.2s; border-radius: 8px; cursor: pointer"
+                      onmouseover="this.style.backgroundColor='#e0e0e0'"
+                      onmouseout="this.style.backgroundColor='transparent'"
+                      onclick="toggleShopifyApps()"
+                    >
+                      <td style="padding: 0.8em 1em; border-radius: 8px 0 0 8px">
+                        <a>Shopify Apps <span id="shopify-arrow" style="font-size: 0.8em">▼</span></a>
+                      </td>
+                      <td style="opacity: 0.8; padding: 0.8em 1em; text-align: right; border-radius: 0 8px 8px 0">
+                        Solo Builder
+                      </td>
+                    </tr>
+                    <tr id="shopify-apps-expanded" style="display: none">
+                      <td colspan="2" style="padding: 0 1em 1em 2em">
+                        <div style="font-size: 0.9em; line-height: 1.4em">
+                          <div style="margin-bottom: 0.5em">
+                            <a
+                              href="https://apps.shopify.com/gifter-cart-auto-include"
+                              target="_blank"
+                              style="text-decoration: underline"
+                              >EasyGift</a
+                            >
+                            - BOGO bundling app (acquired)
+                          </div>
+                          <div>
+                            <a
+                              href="https://apps.shopify.com/easyscan-inventory-and-order"
+                              target="_blank"
+                              style="text-decoration: underline"
+                              >EasyScan</a
+                            >
+                            - Barcode inventory management (acquired)
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      style="transition: background-color 0.2s; border-radius: 8px; cursor: pointer"
+                      onmouseover="this.style.backgroundColor='#e0e0e0'"
+                      onmouseout="this.style.backgroundColor='transparent'"
+                      onclick="togglePersonalProjects()"
+                    >
+                      <td style="padding: 0.8em 1em; border-radius: 8px 0 0 8px">
+                        <a>Personal Projects <span id="personal-projects-arrow" style="font-size: 0.8em">▼</span></a>
+                      </td>
+                      <td style="opacity: 0.8; padding: 0.8em 1em; text-align: right; border-radius: 0 8px 8px 0">
+                        Solo Builder
+                      </td>
+                    </tr>
+                    <tr id="personal-projects-expanded" style="display: none">
+                      <td colspan="2" style="padding: 0 1em 1em 2em">
+                        <div style="font-size: 0.9em; line-height: 1.4em">
+                          <div style="margin-bottom: 0.5em">
+                            <a href="https://pls.mom" target="_blank" style="text-decoration: underline">pls.mom</a>
+                            - AI CLI
+                          </div>
+                          <div>
+                            <a href="https://dropzone.sh" target="_blank" style="text-decoration: underline"
+                              >dropzone.sh</a
+                            >
+                            - Secret sender
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div style="line-height: 1.5em">
+                <div style="margin: 12px; font-weight: 700; font-size: 1em">Investments</div>
                 <div id="links">
                   <table
                     style="
@@ -164,20 +312,6 @@
                         Healthcare
                       </td>
                     </tr>
-
-                    <tr
-                      style="transition: background-color 0.2s; border-radius: 8px; cursor: pointer"
-                      onmouseover="this.style.backgroundColor='#e0e0e0'"
-                      onmouseout="this.style.backgroundColor='transparent'"
-                      onclick="window.open('https://triumpharcade.com/', '_blank')"
-                    >
-                      <td style="padding: 0.8em 1em; border-radius: 8px 0 0 8px">
-                        <a>Triumph</a>
-                      </td>
-                      <td style="opacity: 0.8; padding: 0.8em 1em; text-align: right; border-radius: 0 8px 8px 0">
-                        Gaming
-                      </td>
-                    </tr>
                   </table>
                 </div>
               </div>
@@ -187,5 +321,33 @@
       </center>
       <br />
     </div>
+
+    <script>
+      function toggleShopifyApps() {
+        const expandedRow = document.getElementById("shopify-apps-expanded");
+        const arrow = document.getElementById("shopify-arrow");
+
+        if (expandedRow.style.display === "none") {
+          expandedRow.style.display = "table-row";
+          arrow.innerHTML = "▲";
+        } else {
+          expandedRow.style.display = "none";
+          arrow.innerHTML = "▼";
+        }
+      }
+
+      function togglePersonalProjects() {
+        const expandedRow = document.getElementById("personal-projects-expanded");
+        const arrow = document.getElementById("personal-projects-arrow");
+
+        if (expandedRow.style.display === "none") {
+          expandedRow.style.display = "table-row";
+          arrow.innerHTML = "▲";
+        } else {
+          expandedRow.style.display = "none";
+          arrow.innerHTML = "▼";
+        }
+      }
+    </script>
   </body>
 </html>
