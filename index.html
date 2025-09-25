@@ -2,6 +2,12 @@
   <head>
     <title>Adam Barr-Neuwirth</title>
     <meta name="description" content="🏝️" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div
@@ -13,16 +19,75 @@
         justify-content: center;
         text-align: center;
         gap: 12px;
+        font-family: 'Inter', sans-serif;
       "
     >
       <!-- <img src="ski.jpeg" width="128" style="border-radius: 4px; vertical-align: middle" /> -->
-      <div>Adam Barr-Neuwirth</div>
-      <div></div>
-      <div>🚀 <a href="https://launchpointhq.com">launchpoint</a> - my startup :)</div>
-      <hr />
-      <div>💥 <a href="https://dropzone.sh">dropzone.sh</a> - send self destructing files or text</div>
-      <div>💵 <a href="https://github.com/slugiscool99/rob">rob</a> - bulk buy/sell your Robinhood portfolio</div>
-      <div>🧠 <a href="https://github.com/slugiscool99/pls">pls</a> - call ai models from your terminal via groq</div>
+      <div style="font-weight: 600">Adam Barr-Neuwirth</div>
+      <div style="font-size: 0.9em; font-weight: 300">New York, NY <span id="nyTime" style="color: #888"></span></div>
+      <script>
+        function updateNYTime() {
+          const now = new Date();
+          const nyTime = now.toLocaleString("en-US", {
+            timeZone: "America/New_York",
+            hour: "numeric",
+            minute: "2-digit",
+            second: "2-digit",
+          });
+          document.getElementById("nyTime").textContent = `${nyTime}`;
+        }
+
+        updateNYTime();
+        setInterval(updateNYTime, 1000);
+      </script>
+      <br />
+      <div style="text-align: left; line-height: 2.2em">
+        <div>
+          🚀
+          <a
+            href="https://launchpointhq.com"
+            style="color: #000"
+            onmouseover="this.style.color='#888'"
+            onmouseout="this.style.color='#000'"
+            >launchpoint</a
+          >
+          - my startup :)
+        </div>
+        <br />
+        <div>
+          💥
+          <a
+            href="https://dropzone.sh"
+            style="color: #000"
+            onmouseover="this.style.color='#888'"
+            onmouseout="this.style.color='#000'"
+            >dropzone.sh</a
+          >
+          - send self destructing files or text
+        </div>
+        <div>
+          💵
+          <a
+            href="https://github.com/slugiscool99/rob"
+            style="color: #000"
+            onmouseover="this.style.color='#888'"
+            onmouseout="this.style.color='#000'"
+            >rob</a
+          >
+          - bulk buy/sell your Robinhood portfolio
+        </div>
+        <div>
+          🧠
+          <a
+            href="https://github.com/slugiscool99/pls"
+            style="color: #000"
+            onmouseover="this.style.color='#888'"
+            onmouseout="this.style.color='#000'"
+            >pls</a
+          >
+          - call ai models from your terminal
+        </div>
+      </div>
     </div>
 
     <img src="window.jpg" style="position: absolute; bottom: 4; right: 4; width: 92px" />
