@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>🏝️ Adam Barr-Neuwirth</title>
+    <title>Adam Barr-Neuwirth</title>
     <meta name="description" content="New York, NY" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -8,8 +8,19 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link id="favicon" rel="icon" type="image/png" href="t1.png" />
   </head>
   <body>
+    <script>
+      const icons = ["t2.png", "t3.png", "t4.png", "t5.png", "t6.png"];
+      let i = 0;
+
+      setInterval(() => {
+        const link = document.querySelector("#favicon");
+        link.href = icons[i % icons.length] + "?t=" + Date.now(); // cache-bust
+        i++;
+      }, 1000); // every 2s
+    </script>
     <div
       style="
         padding: 10px;
@@ -61,7 +72,7 @@
             style="color: #000"
             onmouseover="this.style.color='#888'"
             onmouseout="this.style.color='#000'"
-            >dropzone.sh</a
+            >dropzone</a
           >
           - send self destructing files or text
         </div>
@@ -74,7 +85,7 @@
             onmouseout="this.style.color='#000'"
             >rob</a
           >
-          - bulk buy/sell your Robinhood portfolio
+          - manage robinhood from your terminal
         </div>
         <div>
           🧠
