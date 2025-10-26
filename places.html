@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Adam Barr-Neuwirth | Places</title>
+    <meta name="description" content="New York, NY" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link id="favicon" rel="icon" type="image/png" href="t1.png" />
+  </head>
+  <body>
+    <script>
+      const icons = ["t2.png", "t3.png", "t4.png", "t5.png", "t6.png"];
+      let i = 0;
+
+      setInterval(() => {
+        const link = document.querySelector("#favicon");
+        link.href = icons[i % icons.length] + "?t=" + Date.now(); // cache-bust
+        i++;
+      }, 1000); // every 2s
+    </script>
+    <div
+      style="
+        padding: 10px;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 12px;
+        font-family: 'Inter', sans-serif;
+      "
+    >
+      <!-- <img src="ski.jpeg" width="128" style="border-radius: 4px; vertical-align: middle" /> -->
+      <div style="font-weight: 600">Adam Barr-Neuwirth</div>
+      <div style="font-size: 0.9em; font-weight: 300">/places.html</div>
+      <br />
+      <div style="text-align: left; line-height: 1.5em; font-size: 0.8em">
+        <p style="font-weight: 700">Places</p>
+        <p>
+          <a href="https://maps.app.goo.gl/vDC67HBJQK78ZJzGA">37°48'41.2"N 119°28'57.9"W</a> - Yosemite National Park,
+          CA
+        </p>
+        <p>
+          <a href="https://maps.app.goo.gl/mv81Y3FB2pQQBR9u8">36°36'42.4"N 117°07'00.5"W</a> - Death Valley National
+          Park, CA
+        </p>
+        <p><a href="https://maps.app.goo.gl/47yB7MRU5UtrpAHP9">37°44'21.9"N 122°27'09.6"W</a> - San Francisco, CA</p>
+        <p><a href="https://maps.app.goo.gl/SK7W97XG3wUzFCvQ9">37°53'17.5"N 122°19'26.8"W</a> - Albany, CA</p>
+        <p><a href="https://maps.app.goo.gl/kGEWx3LhDEGD9NG96">39°10'59.2"N 120°14'32.6"W</a> - Lake Tahoe, CA</p>
+        <p><a href="https://maps.app.goo.gl/Qsx3xwWUx7E7LTF88">34°02'46.0"N 118°41'12.3"W</a> - Malibu, CA</p>
+        <p><a href="https://maps.app.goo.gl/b5uGjSLF9scGiZnv8">41°15'29.4"N 73°50'24.1"W</a> - Upstate, NY</p>
+        <p><a href="https://maps.app.goo.gl/jJd8E4isLCadpbPu7">40°52'24.7"N 73°30'51.7"W</a> - Oyster Bay, NY</p>
+        <p><a href="https://maps.app.goo.gl/BqUqPbVN3AsyUcab8">37°03'36.6"N 105°37'55.3"W</a> - Nowhere, CO</p>
+        <p><a href="https://maps.app.goo.gl/K5jgZ3XvD3sAUv2m9">22°06'29.4"N 159°40'13.3"W</a> - Kauai, HI</p>
+        <p><a href="https://maps.app.goo.gl/VkhYyxu8t1d8bEi96">48°05'58.3"N 122°31'40.6"W</a> - Whidbey Island, WA</p>
+        <p><a href="https://maps.app.goo.gl/ka37pygF7LmQiPAU7">48°53'26.0"N 2°18'53.8"E</a> - Paris, France</p>
+        <p><a href="https://maps.app.goo.gl/Bi4HwXu4JsB6RRqp7">50°26'06.4"N 30°33'24.8"E</a> - Kyiv, Ukraine</p>
+        <p><a href="https://maps.app.goo.gl/EMXS2Ti1o9nZb3kW6">6°12'27.2"N 75°34'31.6"W</a> - Medellín, Colombia</p>
+        <p><a href="https://maps.app.goo.gl/DFpnVbX6QUhyawsz8">36°51'16.3"N 10°20'07.1"E</a> - Tunis, Tunisia</p>
+        <p><a href="https://maps.app.goo.gl/wmjYEqK9NKjAeaUo9">55°40'24.8"N 12°35'58.5"E</a> - Copenhagen, Denmark</p>
+        <p><a href="https://maps.app.goo.gl/yzxDkcW4C5hBp9WT9">7°55'37.8"N 98°23'34.5"E</a> - Phuket, Thailand</p>
+        <p><a href="https://maps.app.goo.gl/n1Gw6aZ5MLKwB8p89">22°16'42.2"N 114°08'44.2"E</a> - Hong Kong, China</p>
+      </div>
+    </div>
+
+    <img src="window.jpg" style="position: absolute; bottom: 4; right: 4; width: 92px" />
+  </body>
+</html>
