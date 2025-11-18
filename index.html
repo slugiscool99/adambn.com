@@ -21,6 +21,77 @@
         link.href = icons[i % icons.length] + "?t=" + Date.now(); // cache-bust
         i++;
       }, 1000); // every 2s
+
+      const quotes = [
+        {
+          quote:
+            "The Electric Monk was a labour-saving device, like a dishwasher or a video recorder. Dishwashers washed tedious dishes for you, thus saving you the bother of washing them yourself; video recorders watched tedious television for you, thus saving you the bother of looking at it yourself. Electric Monks believed things for you, thus saving you what was becoming an increasingly onerous task, that of believing all the things the world expected you to believe",
+          date: "Nov 18 2025",
+          author: "Douglas Adams",
+        },
+        {
+          quote:
+            "The technology is just gonna get better and better and better and better. And it's gonna get easier and easier, and more and more convenient, and more and more pleasurable to be alone with images on a screen, given to us by people who do not love us but want our money. Which is all right. In low doses, right? But if that's the basic main staple of your diet, you're gonna die. In a meaningful way, you're going to die.",
+          date: "Oct 25 2025",
+          author: "David Foster Wallace",
+        },
+      ];
+
+      let currentQuoteIndex = 0;
+
+      function renderQuote() {
+        const q = quotes[currentQuoteIndex];
+        const display = document.getElementById("quote-display");
+        const dateDisplay = document.getElementById("quote-date");
+        const prevBtn = document.getElementById("prev-quote");
+        const nextBtn = document.getElementById("next-quote");
+
+        if (!display || !dateDisplay) return;
+
+        display.innerHTML = `&quot;${q.quote}&quot; - ${q.author}`;
+        dateDisplay.textContent = q.date;
+
+        // Logic for arrows
+        // Left arrow (back/past) -> goes to OLDER quotes (higher index)
+        if (currentQuoteIndex < quotes.length - 1) {
+          prevBtn.style.opacity = "1";
+          prevBtn.style.cursor = "pointer";
+          prevBtn.style.pointerEvents = "auto";
+        } else {
+          prevBtn.style.opacity = "0.3";
+          prevBtn.style.cursor = "default";
+          prevBtn.style.pointerEvents = "none";
+        }
+
+        // Right arrow (forward/future) -> goes to NEWER quotes (lower index)
+        if (currentQuoteIndex > 0) {
+          nextBtn.style.opacity = "1";
+          nextBtn.style.cursor = "pointer";
+          nextBtn.style.pointerEvents = "auto";
+        } else {
+          nextBtn.style.opacity = "0.3";
+          nextBtn.style.cursor = "default";
+          nextBtn.style.pointerEvents = "none";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        renderQuote();
+
+        document.getElementById("prev-quote").addEventListener("click", () => {
+          if (currentQuoteIndex < quotes.length - 1) {
+            currentQuoteIndex++;
+            renderQuote();
+          }
+        });
+
+        document.getElementById("next-quote").addEventListener("click", () => {
+          if (currentQuoteIndex > 0) {
+            currentQuoteIndex--;
+            renderQuote();
+          }
+        });
+      });
     </script>
     <div
       style="
@@ -69,20 +140,16 @@
         <p style="font-weight: 700">Life</p>
 
         <div style="max-width: 400px; line-height: 1.5em; text-align: left">
-          <p>
-            &quot;The technology is just gonna get better and better and better and better. And it's gonna get easier
-            and easier, and more and more convenient, and more and more pleasurable to be alone with images on a screen,
-            given to us by people who do not love us but want our money. Which is all right. In low doses, right? But if
-            that's the basic main staple of your diet, you're gonna die. In a meaningful way, you're going to die.&quot;
-            - David Foster Wallace
-          </p>
-          <!-- <div style="text-align: center; display: flex; justify-content: center; gap: 12px">
-            <a style="opacity: 0.5">&larr;</a><span>Oct 25 2025</span><a style="opacity: 0">&rarr;</a>
-          </div> -->
+          <p><a href="https://letterboxd.com/djcreamcheese/films/rated/4-5/">Movies</a> on Letterboxd</p>
+
+          <p id="quote-display"></p>
+          <div style="text-align: center; display: flex; justify-content: center; gap: 12px; user-select: none">
+            <a id="prev-quote" style="opacity: 0.5">&larr;</a><span id="quote-date"></span
+            ><a id="next-quote" style="opacity: 0">&rarr;</a>
+          </div>
 
           <!-- <p><a href="https://readerslibrary.org/wp-content/uploads/The-Veldt.pdf">The Veldt</a> by Ray Bradbury</p> -->
           <!-- <p><a href="https://www.tnellen.com/westside/harrison.pdf">Harrison Bergeron</a> by Kurt Vonnegut</p> -->
-          <p><a href="https://letterboxd.com/djcreamcheese/films/rated/4-5/">Movies</a> on Letterboxd</p>
           <!-- <p><a href="https://open.spotify.com/track/6GzMz3s0K1YKwRVI36CgRx?si=e801f32f81b74370">Liebestraume</a></p> -->
           <!-- <p><a href="places.html">Places</a> I've found special</p> -->
         </div>
