@@ -16,11 +16,21 @@
       const icons = ["t2.png", "t3.png", "t4.png", "t5.png", "t6.png"];
       let i = 0;
 
-      setInterval(() => {
+      const cycleFavicon = () => {
+        const icon = icons[i % icons.length];
         const link = document.querySelector("#favicon");
-        link.href = icons[i % icons.length] + "?t=" + Date.now(); // cache-bust
+        link.href = icon + "?t=" + Date.now(); // cache-bust
         i++;
-      }, 1000); // every 2s
+
+        // Cycle t2-t4 with 200ms in between, 1000ms for the rest
+        let delay = 1000;
+        if (icon === "t2.png" || icon === "t3.png" || icon === "t4.png") {
+          delay = 200;
+        }
+        setTimeout(cycleFavicon, delay);
+      };
+
+      setTimeout(cycleFavicon, 1000);
 
       const quotes = [
         {
